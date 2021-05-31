@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Set up a fancy title inspiration from https://codepen.io/TajShireen/pen/abzmoRE */
+h1{
+    font-size: 5rem;
+    text-align: center;
+    color: #fcedd8;
+    font-family: 'Niconne', cursive;
+    font-weight: 700;
+    text-shadow: 5px 5px 0px #eb452b, 
+                10px 10px 0px #efa032, 
+                15px 15px 0px #46b59b, 
+                20px 20px 0px #017e7f, 
+                25px 25px 0px #052939, 
+                30px 30px 0px #c11a2b; 
+}
+
+/* make the photo bar 6 equally spaced columns */
+.photo {
+    float: left;
+    width: 18%;
+    padding: 5px;
+}
+
+/* Make the images in the photo bar a little opaque when you hover on them */
+.photo img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+  
+.photo img:hover {
+    opacity: 1;
+}
+  
+/* Clear floats after the photobar */
+.photobar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Setting up the background colors */
+.section0 {
+    background:#f8b195;
+    padding: 15px 10px 15px 20px;
+}
+
+.section1 {
+    background:#f67280;
+    padding: 15px 10px 15px 20px;
+}
+
+.section2 {
+    background:#c06c84;
+    padding: 15px 10px 15px 20px;
+}
+
+.section3 {
+    background:#6c5b7b;
+    padding: 15px 10px 15px 20px;
+}
+
+.section4 {
+    background:#355c7d;
+    padding: 15px 10px 15px 20px;
+}
+
+
+/* Making the form look a little nicer */
+form {
+    /* Align the form to the left */
+    margin:left;
+    width: 500px;
+    /* Form outline */
+    padding: 1em;
+  }
+  
+  input, textarea {
+    /* Set the font to be the same */
+    font: 1em sans-serif;
+  
+    /* Make a border around the textarea */
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+  
+  textarea {
+    /* Set a uniform height to type some text */
+    height: 5em;
+  }
+
+
