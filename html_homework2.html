@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="hw2_stylesheet.css" rel="stylesheet" type="text/css" />
+<title> Beartooth Hiking Company </title>
+</head>
+
+<body text=#000000 link=#f67280 alink=#355c7d vlink=#f8b195>
+<div class="section0">
+    <center>
+    <h1> Beartooth Hiking Company </h1>
+    <br>
+    <h2>Beartooth Hiking Company is dedicated to helping you get outdoors! </h2>
+    <br>
+    </center>
+</div>
+<div class="section1"
+    <h3>We offer incredible hikes in the following locations:</h3>
+    <ol>
+        <li> The Hellroaring Plateau </li>
+        <li> Gardiner Lake </li>
+        <li> The Beaten Path </li>
+    </ol>
+    <br><br>
+</div>
+
+<div class="section2">
+    <hr>
+    <h3> Photos</h3>
+    <hr>
+
+
+    <!-- The old image section, keeping just in case
+    <section id="photos">
+        <img src="images/BeartoothIslandLakeTrail_0326_800x600.jpg" alt="LakeTrail" style="width:32%">
+        <img src="images/BeartoothView_800x600.jpg" alt="View" style="width:32%">
+        <img src="images/TetonTrail-2_800x600.jpg" alt="Tetons" style="width:32%">
+        <img src="images/clay_butte_06.jpg" alt="Butte" style="width:32%">
+        <img src="images/Camping01.gif" alt="Camping" style="height:32%;width:32%">
+        
+    </section>
+    -->
+    <!-- Photo Gallery modeled after https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp 
+        Once we cover JavaScript in class I should be able to make these clickable/enlargable -->
+    <div class="photobar">
+        <div class="photo">
+            <img src="images/BeartoothIslandLakeTrail_0326_800x600.jpg" alt="LakeTrail" style="width:100%">
+        </div>
+        <div class="photo">
+            <img src="images/BeartoothView_800x600.jpg" alt="View" style="width:100%">
+        </div>
+        <div class="photo">
+            <img src="images/TetonTrail-2_800x600.jpg" alt="Tetons" style="width:100%">
+        </div>
+        <div class="photo">
+            <img src="images/clay_butte_06.jpg" alt="Butte" style="width:100%">
+        </div>
+        <div class="photo">
+            <img src="images/Hiking2.gif" alt="Hiking" style="width:100%">
+        </div>
+    </div>
+
+
+    <br><br><br>
+</div>
+
+<div class="section3">
+    <hr>
+    <h3>Hike Comparison</h3>
+    <hr>
+    <table border=2 cellspacing=3 cellpadding=3>
+    <tr>
+        <th> Hike </th>
+        <th> Duration (days) </th>
+        <th> Intensity </th>
+        <th> Weekday Cost ($/day) </th>
+        <th> Weekend Cost ($/day) </th>
+    </tr>
+    <tr>
+        <th> The Hellroaring Plateau </th>
+        <td style="text-align:center"> 2, 3, or 4 </td>
+        <td style="text-align:center"> Easy </td>
+        <td style="text-align:center"> 35 </td>
+        <td style="text-align:center"> 52.50 </td>
+    </tr>
+    <tr>
+        <th> Gardiner Lake </th>
+        <td style="text-align:center"> 3 or 5 </td>
+        <td style="text-align:center"> Intermediate </td>
+        <td style="text-align:center"> 40 </td>
+        <td style="text-align:center"> 60 </td>
+    </tr>
+    <tr>
+        <th> The Beaten Path </th>
+        <td style="text-align:center"> 5 or 7 </td>
+        <td style="text-align:center"> Difficult </td>
+        <td style="text-align:center"> 45 </td>
+        <td style="text-align:center"> 67.50 </td>
+    </tr>
+    </table>
+
+
+    <p>We at BHC are looking forward to hiking with you soon!</p>
+
+    Find more information on the area at 
+    <A HREF="https://www.fs.usda.gov/recarea/shoshone/recarea/?recid=80899">wilderness.net</A>
+    <br><br><br>
+</div>
+
+<div class="section4">
+    <hr>
+    <h3>Questions? Fill out this form to send us an email! </h3>
+    <form action="mailto:contact@beartoothhiking.com" method="POST" enctype="multipart/form-data" name="EmailForm">      
+        <input name="name" type="text" placeholder="Name">   
+        <br>
+        <input name="email" type="text" placeholder="Email Address">
+        <br>
+        <textarea name="text" placeholder="Questions/Comments"></textarea>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+</div>
+</body>
+</html>
