@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Beartooth Hiking Company</title>
+        <meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			function sendRequest(url) {
+				// get form parameters and translate them to a JSON object
+				// that is mapped to a JSON/Java object in service
+				var viewArr = $("#myForm").serializeArray();
+			  	var view = {};
+			  	// need to convert { name:"VarName", value:"ValName"} to {VarName:"ValName"}
+			  	for (var i in viewArr) {
+			    	view[viewArr[i].name] = viewArr[i].value;
+			  	}
+                          
+                // call back to service with post containing JSON data and on
+                // return process results back into page          
+                $.ajax({
+                    type:"POST",
+                    contentType: 'application/json',
+                    dataType: "json",
+                    data: JSON.stringify(view),
+                    url: url,
+                    // you will want to update success function to get specific
+                    // JSON data fields for output back to the original HTML page
+                    success: function(data) {
+						// this sets the html content of the html object
+						// with id of reponseArea.
+						try {
+							var message = data.text;
+						} catch {
+							var message = "Error. Response from the server was incorrectly formatted."
+						} 
+						$("#responseArea").html("<b>" + message + "</b>");
+                 	}
+                });
+			};	
+		</script>
+	</head>
+	<body>
+		<!-- the form contains the input elements to collect specific information
+			 as you did in earlier work.  Make sure names of parameters correspond
+			 to the field values in the desired JSON/Java object. -->
+		<form id="myForm">
+			<!-- Add your gui widgets and input elements here -->
+            Which hike are you interested in? <br>
+            <input type="radio" id="Gardiner Lake" name="hike" value="gardiner"> 
+            <label for="grabiner">Gardiner Lake (3 or 5 days)</label><br>
+			<input type="radio" id="Hellroaring Plateau" name="hike" value="hellroaring">
+			<label for="hellroaring">Hellroaring Plateau (3, 4, or 5 days)</label><br>
+			<input type="radio" id="The Beaten Path" name="hike" value="beaten">
+			<label for="beaten">The Beaten Path (5 or 7 days)</label><br>
+            Start date (MM/DD/YYYY):  <input type="TEXT" name="date"> <br />
+            Duration: <input type="TEXT" name="duration"> <br />
+            <label for="party"> Number in Party: </label>
+			<select id="party" name="party">
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+				<option value="7"> 7 </option>
+				<option value="8"> 8 </option>
+				<option value="9"> 9 </option>
+				<option value="10"> 10 </option>
+			</select><br/>
+			
+			<!-- Keep the button for submitting your form, but you need to 
+				 update the parameter, url, to reference your back end 
+				 service that will process the input data -->
+            <button type="button" onclick="sendRequest('https://web1.jhuep.com:443/courtney_json/webresources/rates/toObject')">Get Rate</button>
+		</form>     
+		<!-- This is nothing more than a labelled "output area" for your results or errors -->
+        <div id="responseArea"><pre></pre></div>
+	</body>
+</html>
